@@ -1,5 +1,5 @@
 # .github/workflows/parallel-jobs.yml
-name: Parallel Job Execution
+name: Parallel Job Executions
 
 on: [push]
 
