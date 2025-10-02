@@ -1,0 +1,29 @@
+# .github/workflows/parallel-jobs.yml
+name: Parallel Job Execution
+
+on: [push]
+
+jobs:
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running unit tests..."
+      - run: sleep 10
+      - run: echo "Unit tests completed"
+
+  integration-tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running integration tests..."
+      - run: sleep 15
+      - run: echo "Integration tests completed"
+
+  linting:
+    name: Code Linting
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running linter..."
+      - run: sleep 5
+      - run: echo "Linting completed"
